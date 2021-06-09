@@ -1,0 +1,272 @@
+@import 'variables';
+
+
+/* Banner Section */
+
+.banner {
+    background-image: url('../images/bg.jpg');
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size:cover;
+    background-position: bottom left 30%;
+    background-repeat:no-repeat;
+
+    @media #{$md-down} {
+      background-position: bottom right;
+        height: 600px;
+    }
+}
+
+header {
+    width: 100%;
+    padding: 42px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media #{$md-down} {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media #{$sm-down} {
+        background: $white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 12px;
+        }
+    }
+
+    .mob-nav {
+        @media #{$sm-up} {
+            display: none;
+        }
+    }
+
+    nav {
+        @media #{$sm-down} {
+            display: none;
+            position: absolute;
+            background: $white;
+            top: 90px;
+            left: 15px;
+            width: calc(100% - 30px);
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 40px 15px -35px rgba($black, 0.4);
+        }
+
+        @media #{$sm-up} {
+            display: block !important;
+        }
+
+        a {
+            font-family:$montserrat;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-left: 25px;
+            display: inline-flex;
+            align-items: center;
+            letter-spacing: 1px;
+
+            @media #{$lg-down} {
+                margin-left: 25px;
+            }
+
+            @media #{$md-down} {
+                margin-left: 12px;
+            }
+
+            @media #{$sm-down} {
+                display: block;
+                margin: 5px 0;
+            }
+
+            &:first-child {
+                margin-left: 0;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}
+
+
+/* Slider Style */
+.banner-box {
+    height: 100%;
+    display: flex;
+    flex-direction:row-reverse;
+    align-items:center;
+
+    @media #{$xl-down} {
+        
+    }
+
+    @media #{$md-down} {
+        background: none;
+    }
+
+     .banner-content {
+         max-width: 500px;
+
+      p{
+          font-size:18px;
+          line-heigt:24px;
+      }
+
+        @media #{$md-down} {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @media #{$sm-down} {
+            max-width: 330px;
+        }
+    }
+}
+
+.about-box{
+
+.about-text{
+    max-width:600px;
+    margin:0 auto 40px;
+}
+}
+
+.services-box{
+background-color: $grey;
+
+.grid-4{
+
+    &:first-child
+        {
+        margin-bottom:50px;
+
+     @media #{$md-down} {
+            margin-bottom:0px;
+        }
+        }
+
+        .service-data{
+              h6 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+        @media #{$sm-down} {
+            margin-bottom:20px;
+        }
+        }
+}
+
+}
+
+
+
+.grid-4{
+    
+.feature-data{
+    
+    display: flex;
+    align-items: center;
+    color:$white;
+
+    @media #{$md-down} {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+    img{margin-right:15px;}
+
+    img path{ fill: #fff;}
+
+    h4{font-size:20px; color:#fff;}
+    h6{font-size: 12;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;}
+
+}
+
+}
+
+/* Contact Us Section*/
+.contact-us {
+  
+    form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+
+     @media #{$md-down} {
+                max-width: 100%;
+            }
+
+        input {
+            @media #{$xs-up} {
+                width: calc(50% - 10px);
+            }
+        }
+         input.title {
+            @media #{$xs-up} {
+                width: 100%;
+            }
+        }
+
+        button {
+           margin-top: 25px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin: 25px auto 0px;
+        }
+    }
+}
+
+footer{
+    background-color:$brown;
+
+
+.footer-col{
+    display: grid;
+  grid-template-columns: 25% 25% 16.66% 16.66% 16.66%;
+  @media #{$sm-down} {
+                display: block;
+            }
+
+  .col-text 
+    {
+        @media #{$sm-down} {
+                margin-bottom:30px;
+                
+            }
+      h6{
+          font-size:16px; font-weight:bold; margin-bottom:15px; color: #fff;
+      }
+
+  a,p{
+display:block;
+font-size:12px;
+line-height:20px;
+color: #fff;
+  }
+}
+}
+}
